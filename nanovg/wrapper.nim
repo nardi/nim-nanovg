@@ -167,6 +167,9 @@ else:
 #include "{currentDir}/src/nanovg_gl_utils.h"
 """.}
 
+# Import stb_image in order to load the implementation.
+import stb_image/read
+
 #{{{ Types ------------------------------------------------------------------
 
 type
