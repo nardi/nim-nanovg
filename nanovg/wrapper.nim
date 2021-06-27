@@ -147,7 +147,7 @@ const GLVersion* =
   elif defined(ios) or defined(android): "GLES3"
   else: "GL3"
 
-{.passC: fmt" -I{currentDir}/deps/stb -DNANOVG_{GLVersion}_IMPLEMENTATION",
+{.passC: fmt" -I{currentDir}/deps/stb -DNANOVG_{GLVersion}_IMPLEMENTATION -DNVG_NO_STB_IMPL",
   compile: "src/nanovg.c".}
 
 when defined(android) or defined(ios):
